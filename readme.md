@@ -15,9 +15,8 @@
 ## Сборка приложения
 
 git clone https://github.com/evteev777/FlightFilter.git \
-mvn package
-
 cd FlightFilter \
+mvn package \
 cp application.yaml target \
 cd target
 
