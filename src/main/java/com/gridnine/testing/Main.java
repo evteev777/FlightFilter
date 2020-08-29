@@ -7,6 +7,7 @@ import com.gridnine.testing.filter.MoreTwoHoursGroundTime;
 import com.gridnine.testing.flight.Flight;
 import com.gridnine.testing.flight.FlightBuilder;
 import com.gridnine.testing.util.Log;
+import org.apache.log4j.BasicConfigurator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,8 @@ public class Main {
     private static final List<FlightFilter> filters = new ArrayList<>();
 
     public static void main(String[] args) {
+        BasicConfigurator.configure();
+
         try {
             List<Flight> flights = FlightBuilder.createFlights();
             if (args.length > 0) {
@@ -33,7 +36,7 @@ public class Main {
                         }
                         return true;
                     })
-                    .forEach(flight -> Log.info(flight.toString()));
+                    .forEach(flight -> Log.debug(flight.toString()));
 
         } catch (Exception e) {
             Log.error(e);
@@ -53,5 +56,4 @@ public class Main {
             }
         }
     }
-
 }
