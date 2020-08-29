@@ -1,0 +1,14 @@
+check-connection: Properties file connected, get arguments from file
+
+# Uncomment the line "filter:" to use options from this file
+#
+# You can use arguments, separated by a space, in any combination:
+# 1 or DepartingInPast
+# 2 or DepartsBeforeArrives
+# 3 or MoreTwoHoursGroundTime
+#
+# For example:
+# filters: 1 2 3
+# filters: DepartingInPast DepartsBeforeArrives
+#
+filters: 1 3
