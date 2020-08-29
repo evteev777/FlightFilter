@@ -42,20 +42,28 @@ public class Main {
         List<FlightFilter> filters = new ArrayList<>();
         try (FileInputStream fis = new FileInputStream(propertyFile)) {
 
-            if (args.length == 0) {
+            if (args.length > 0) {
+                Log.debug("Get filters from command line");
+            } else {
                 Properties property = new Properties();
                 property.load(fis);
                 Log.debug(property.getProperty("check-connection"));
+                Log.debug(property.getProperty("filters") == null ?
+                        "Properties file is empty, use default filter set:" :
+                        "Get filters from application.yaml");
                 args = property.getProperty("filters", "1 2 3").split(" ");
             }
 
             for (String arg : args) {
                 if ("1".equals(arg) || "DepartingInPast".equals(arg)) {
                     filters.add(new DepartingInPast());
+                    Log.debug("Filter: 1 Departing In Past");
                 } else if ("2".equals(arg) || "DepartsBeforeArrives".equals(arg)) {
                     filters.add(new DepartsBeforeArrives());
+                    Log.debug("Filter: 2 Departs Before Arrives");
                 } else if ("3".equals(arg) || "MoreTwoHoursGroundTime".equals(arg)) {
                     filters.add(new MoreTwoHoursGroundTime());
+                    Log.debug("Filter: 3 More TwoHours Ground Time");
                 } else {
                     throw new IllegalArgumentException("Illegal arguments");
                 }
