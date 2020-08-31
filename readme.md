@@ -20,7 +20,7 @@ mvn package \
 cp application.yaml target \
 cd target
 
-## Настройка и запуск
+## Настройка
 
 Приложение может получать набор фильтров из файла application.yaml
 
@@ -30,9 +30,13 @@ cd target
 3. MoreTwoHoursGroundTime - Общее время, проведённое на земле превышает два часа 
 
 Например: \
-filters: DepartingInPast DepartsBeforeArrives
+filters: DepartingInPast \
+filters: DepartingInPast DepartsBeforeArrives \
+filters: DepartingInPast MoreTwoHoursGroundTime \
+filters: DepartingInPast DepartsBeforeArrives MoreTwoHoursGroundTime
 
-После чего в командной строке запустить приложение: \
+## Запуск
+
 java -jar FlightFilter.jar
 
 ## Постановка задачи
