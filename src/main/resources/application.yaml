@@ -1,0 +1,13 @@
+
+# You can use arguments, separated by a space, in any combination:
+# DepartingInPast
+# DepartsBeforeArrives
+# MoreTwoHoursGroundTime
+#
+# For example:
+# filters: DepartingInPast
+# filters: DepartingInPast DepartsBeforeArrives
+# filters: DepartingInPast MoreTwoHoursGroundTime
+# filters: DepartingInPast DepartsBeforeArrives MoreTwoHoursGroundTime
+#
+flightFilters: DepartingInPast DepartsBeforeArrives MoreTwoHoursGroundTime

@@ -1,9 +1,9 @@
 package com.gridnine.testing;
 
-import com.gridnine.testing.filter.DepartingInPast;
-import com.gridnine.testing.filter.DepartsBeforeArrives;
+import com.gridnine.testing.filter_impls.DepartingInPast;
+import com.gridnine.testing.filter_impls.DepartsBeforeArrives;
 import com.gridnine.testing.filter.FlightFilter;
-import com.gridnine.testing.filter.MoreTwoHoursGroundTime;
+import com.gridnine.testing.filter_impls.MoreTwoHoursGroundTime;
 import com.gridnine.testing.flight.Flight;
 import com.gridnine.testing.flight.FlightBuilder;
 import org.junit.jupiter.api.Test;
