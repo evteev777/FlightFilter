@@ -29,7 +29,7 @@ cd target
 2. DepartsBeforeArrives - У перелета есть сегменты с датой прилёта раньше даты вылета
 3. MoreTwoHoursGroundTime - Общее время, проведённое на земле превышает два часа 
 
-Например:
+Например: \
 filters: DepartingInPast DepartsBeforeArrives
 
 После чего в командной строке запустить приложение: \

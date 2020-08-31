@@ -9,7 +9,7 @@ import java.util.Properties;
 
 public class FlightFilterFactory {
 
-    private static final String PROPERTIES = "/application.yaml";
+    private static final String PROPERTIES = "application.yaml";
     private static final String PACKAGE = "com.gridnine.testing.filter_impls.";
     private static final FlightFilterFactory INSTANCE;
 
