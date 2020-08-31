@@ -30,10 +30,10 @@ cd target
 3. MoreTwoHoursGroundTime - Общее время, проведённое на земле превышает два часа 
 
 Например: \
-filters: DepartingInPast \
-filters: DepartingInPast DepartsBeforeArrives \
-filters: DepartingInPast MoreTwoHoursGroundTime \
-filters: DepartingInPast DepartsBeforeArrives MoreTwoHoursGroundTime
+flightFilters: DepartingInPast \
+flightFilters: DepartingInPast DepartsBeforeArrives \
+flightFilters: DepartingInPast MoreTwoHoursGroundTime \
+flightFilters: DepartingInPast DepartsBeforeArrives MoreTwoHoursGroundTime
 
 ## Запуск
 
