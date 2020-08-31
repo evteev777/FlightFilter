@@ -33,8 +33,7 @@ public class FlightFilterFactory {
 
             if (flightFiltersProp == null || flightFiltersProp.equals("")) {
                 throw new IllegalArgumentException("Filters are not specified, " +
-                        "Check Application.yaml !!!]n" +
-                        "Flights are shown without filters:");
+                        "check Application.yaml. Flights are shown without filters !!!");
             }
 
             for (String flightFilter : flightFiltersProp.split(" ")) {
@@ -44,8 +43,8 @@ public class FlightFilterFactory {
             Log.error(e.getMessage(), e);
         } catch (IOException e) {
             Log.error("Properties file not found! Put Application.yaml " +
-                    "in the same folder as FlightFilter.jar !!!\n" +
-                    "Flights are shown without filters:", e);
+                    "in the same folder as FlightFilter.jar.", e);
+            Log.error("Flights are shown without filters: !!!\"", e);
         }
     }
 
